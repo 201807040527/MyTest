@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    let [p1, p2, p3] = ['xixi', 'cici', 'didi'];
+    console.log('p1==>', p1);
+    let { color, weight } = { weight: '5kd', color: '白色' };
+    console.log('color===>', color)
+
+    let promise = new Promise((resolve, reject) => {
+      // resolve('成功')
+      reject('失败')
+    });
+    // promise.then(result => {
+    //   console.log('result==>', result)
+    // }, err => {
+    //   console.log('err==>', err)
+    // })
+
+    promise.then(res => {
+      console.log('res==>', res);
+    }).catch(err => {
+      console.log('err=>', err)
+    })
+  </script>
+
+</body>
+
+</html>
