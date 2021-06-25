@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>break 和 continue 语句</title>
+</head>
+
+<body>
+  <script>
+    //continue语句
+    function Cont() {
+      var x = '';        //没有为空，则会输出undefined
+      for (var i = 0; i < 10; i++) {
+        if (i == 4) {        //循环会跳过4这个数
+          continue;
+        }
+        x = x + '数字是' + i + '<br/>'
+      }
+      document.write(x);
+    }
+    Cont();
+
+    //break语句
+    function Bre() {
+      var x = '';        //没有为空，则会输出undefined
+      for (var i = 0; i < 10; i++) {
+        if (i == 4) {        //循环会跳出在4这里
+          break;
+        }
+        x = x + '数字是' + i + '<br/>'
+      }
+      document.write(x);
+    }
+    Bre();
+  </script>
+</body>
+
+</html>
