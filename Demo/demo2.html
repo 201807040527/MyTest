@@ -5,13 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>set</title>
+  <title>set map</title>
 </head>
 
 <body>
   <script>
     const mySet = new Set([1, 2, 3, 4, 4])
     alert([...mySet]);       // [1, 2, 3, 4]
+
+    var a = new Map() //新建一个Map对象
+    console.log(a) //Map(0) {}
+    a.set('name', 'xiaoming');
+    // 添加值 变成了Map(1) {"name" => "xiaoming"}
+    a.get(name);
+    a.set('age', 19)
+// 添加值  变成Map(2) {"name" => "xiaoming", "age" => 19}<br> a.get('name') //xiaoming  获取值
   </script>
 </body>
 
