@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML DOM - 修改</title>
+</head>
+
+<body>
+  <p id="todo1">Hello World!</p>
+
+  <p id="todo2">Hi JS!</p>
+
+  <input type="button" onclick="document.body.style.backgroundColor='lavender';" value="修改背景颜色">
+  <input type="button" onclick="Col()" value="修改背景颜色">
+
+  <input type="button" onclick='Tex()' value="修改文本">
+  <p id='todo3'>会变</p>
+  <script>
+    //innerHTML 属性:改变元素内容
+    document.getElementById("todo1").innerHTML = "新文本!";
+
+    //修改样式
+    document.getElementById("todo2").style.color = "blue";
+    document.getElementById("todo2").style.fontFamily = "Arial";
+    document.getElementById("todo2").style.fontSize = "larger";
+
+    //点击事件-修改样式
+    function Col() {
+      document.body.style.backgroundColor = "#eee";
+    }
+    //点击事件-修改文本
+    function Tex() {
+      document.getElementById('todo3').innerHTML = '我变'
+    }
+
+  </script>
+</body>
+
+</html>

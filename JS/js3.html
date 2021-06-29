@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML DOM - 元素</title>
+</head>
+
+<body>
+  <div id='todo_F'>
+    <p id="todo1" class="into1">hello js!</p>
+    <div id='todo1'></div>
+    <div id='todo2'></div>
+    <div id="todo_re"></div>
+    <p id="todo_C"></p>
+  </div>
+  <div id="div_re">
+    <p id="p1">一个段落。</p>
+    <p id="p2">另一个段落。</p>
+  </div>
+  <div id="div_rep">
+    <p id="rep1">这是一个段落。</p>
+    <p id="rep2">这是另外一个段落。</p>
+  </div>
+  <script>
+    //appendChild():把新的子节点添加到指定节点
+    //createElement():创建元素节点。
+    //createTextNode():创建文本节点。
+    let dtap = document.createElement('p');
+    let dtext = document.createTextNode('0.新段落');
+    dtap.appendChild(dtext);
+    let did = document.getElementById('todo1');
+    did.appendChild(dtap);
+
+    // insertBefore()
+    let btap = document.createElement('p');
+    let btext = document.createTextNode('1.新段落');
+    btap.appendChild(btext);
+
+    let element = document.getElementById('todo_F')
+    let child = document.getElementById('todo_C');
+    element.insertBefore(btap, child);
+
+
+    //removeChild():删除子节点。
+    var parent = document.getElementById("div_re");
+    var rechild = document.getElementById("p1");
+    parent.removeChild(rechild);
+
+    //replaceChild():	替换子节点
+    var repparent = document.getElementById("div_rep");
+    var repchild = document.getElementById("rep1");
+    var reppara = document.createElement("p");
+    var repnode = document.createTextNode("这是一个新的段落。");
+    reppara.appendChild(repnode);
+    repparent.replaceChild(reppara, repchild);
+  </script>
+
+</body>
+
+</html>

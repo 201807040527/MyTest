@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML DOM 方法</title>
+</head>
+
+<body>
+  <p id="todo1" class="into1">hello js!</p>
+
+  <script>
+    //getElementById()方法:指定 ID 的元素   innerHTML属性
+    let a = document.getElementById('todo1');
+    document.write('一为' + a.innerHTML + "<br/>");
+
+    let aa = document.getElementById("todo1").innerHTML;
+    document.write(aa + "<br/>");
+
+    //getElementsByTagName():指定标签名称的所有元素的节点列表
+    let b = document.getElementsByTagName('p');
+    document.write('二为' + b[0].innerHTML + "<br/>")
+
+    //getElementsByClassName():返回包含带有指定类名的所有元素的节点列表
+    let c = document.getElementsByClassName('into1');
+    document.write('三为' + c[0].innerHTML + "<br/>")
+
+
+  </script>
+</body>
+
+</html>
