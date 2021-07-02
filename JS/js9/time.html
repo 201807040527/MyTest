@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>转换时间戳的两种方法</title>
+</head>
+
+<body>
+  <script>
+    function formatDate(code) {
+      var year = code.getFullYear();    //取得4位数的年份
+      var month = code.getMonth() + 1;  //取得日期中的月份，其中0表示1月，11表示12月
+      var date = code.getDate();        //返回日期月份中的天数（1到31）
+      var hour = code.getHours();       //返回日期中的小时数（0到23）
+      var minute = code.getMinutes();   //返回日期中的分钟数（0到59）
+      var second = code.getSeconds();   //返回日期中的秒数（0到59）
+      if (month >= 1 && month <= 9) {
+        month = "0" + month;
+      }
+      if (date >= 0 && date <= 9) {
+        date = "0" + date;
+      }
+      if (hour >= 1 && hour <= 9) {
+        hour = "0" + hour;
+      }
+      if (minute >= 0 && minute <= 9) {
+        minute = "0" + minute;
+      }
+      if (second >= 0 && second <= 9) {
+        second = "0" + second;
+      }
+      return year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+    }
+    var g = 1625207226000; //定义一个时间戳变量
+    var d = new Date(g);   //创建一个指定的日期对象
+    document.write(formatDate(d));
+    console.log(formatDate(d));
+
+    //转换时间戳
+    function DateTime() {
+      const date = new Date(1625207226000)
+      const Y = date.getFullYear() + '-'
+      const M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-'
+      const D = (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) + ' '
+      const H = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':'
+      const m = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) + ':'
+      const s = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()) + ''
+      return (Y + M + D + H + m + s);
+    }
+    document.write('<br/>' + DateTime());
+  </script>
+</body>
+
+</html>
