@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>获取时间</title>
+</head>
+
+<body>
+  <script>
+    // //时间戳
+    // var sjc = new Date();
+    // document.getElementById("demo").innerHTML = sjc.getTime();
+    // //年份
+    // var nian = new Date();
+    // document.getElementById("demo_nian").innerHTML = nian.getFullYear();
+    // //月份
+    // var yue = new Date();
+    // document.getElementById("demo_yue").innerHTML = yue.getMonth() + 1;
+    // //
+    // var ri = new Date();
+    // document.getElementById("demo_ri").innerHTML = ri.getDate();
+    // //小时
+    // var shi = new Date();
+    // document.getElementById("demo_shi").innerHTML = shi.getHours();
+    // //分钟
+    // var fen = new Date();
+    // document.getElementById("demo_fen").innerHTML = fen.getMinutes();
+    // //秒
+    // var miao = new Date();
+    // document.getElementById("demo_miao").innerHTML = miao.getSeconds();
+    // //返回时分秒
+    // var all = new Date();
+    // document.getElementById("demo_all").innerHTML = all.toLocaleTimeString();
+
+    //获取当前时间
+    function Timer() {
+      var date = new Date();
+      var seperator1 = "-";
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var strDate = date.getDate();
+      if (month >= 1 && month <= 9) {
+        month = "0" + month;
+      }
+      if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+      }
+      var seperator2 = ":";
+      var seperator3 = " ";
+      var hour = date.getHours();//得到小时
+      var minu = date.getMinutes();//得到分钟
+      var sec = date.getSeconds();//得到秒
+      var MS = date.getMilliseconds();//获取毫秒
+      if (hour >= 1 && hour <= 9) {
+        hour = "0" + hour;
+      }
+      if (minu >= 0 && minu <= 9) {
+        minu = "0" + minu;
+      }
+      if (sec >= 0 && sec <= 9) {
+        sec = "0" + sec;
+      }
+
+      var currentdate =
+        year + seperator1 + month + seperator1 + strDate + seperator3 + hour + seperator2 + minu + seperator2 + sec;
+      console.log('currentdate===>', currentdate);
+      document.write(currentdate);
+    }
+    Timer();
+
+  </script>
+</body>
+
+</html>
