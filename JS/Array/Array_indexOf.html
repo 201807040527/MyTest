@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>indexOf() 方法</title>
+</head>
+
+<body>
+  <!-- indexOf() 方法 -->
+  <p id="demo_one">单击</p>
+  <button onclick="myFun1()">点我</button>
+  <!--  -->
+  <p id="demo_two">单击按钮</p>
+  <button onclick="myFun2()">点我</button>
+  <script>
+    function myFun1() {
+      var fruits = ["香蕉", "橙子", "苹果", "甜瓜"];
+      var apple_first = fruits.indexOf("苹果")
+      var x = document.getElementById("demo_one");
+      x.innerHTML = apple_first;
+    }
+    //
+    function myFun2() {
+      var fruit_last = ["香蕉", "橙子", "苹果", "甜瓜"];
+      var apple_last = fruit_last.lastIndexOf("苹果")
+      var y = document.getElementById("demo_two");
+      y.innerHTML = apple_last;
+    }
+  </script>
+</body>
+
+</html>

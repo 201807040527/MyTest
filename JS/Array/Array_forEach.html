@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forEach()方法</title>
+</head>
+
+<body>
+  <!-- 输出数组的每个元素 -->
+  <button onclick="num.forEach(myFun)">输出数组的每个元素</button>
+  <p id="demo"></p>
+
+  <!-- 计算数组所有元素相加的总和 -->
+  <button onclick="num2.forEach(myFun2)">计算数组所有元素相加的总和</button>
+  <p id="demo_add"></p>
+
+  <!-- 点击按钮将数组中的所有值乘以特定数字 -->
+  乘以: <input type="number" id="mul" value="10">
+  <button onclick="num3.forEach(myFun3)">乘以特定数字</button>
+  <p>计算后的值: <span id="demo_mul"></span></p>
+
+
+
+  <script>
+    // 输出数组的每个元素
+    var demoP = document.getElementById("demo");
+    var num = [2, 4, 6, 8, 10];
+    function myFun(a, i) {
+      demoP.innerHTML = demoP.innerHTML + "i[" + i + "]: " + a + "<br>";
+    }
+
+    // 计算数组所有元素相加的总和
+    var sum = 0;
+    var num2 = [65, 44, 12, 4];
+    function myFun2(item) {
+      // sum += item;
+      sum = sum + item;
+      demo_add.innerHTML = sum;
+    }
+
+    //点击按钮将数组中的所有值乘以特定数字
+    var num3 = [65, 44, 12, 4];
+
+    function myFun3(item, index, arr) {
+      arr[index] = item * document.getElementById("mul").value;
+      demo_mul.innerHTML = num3;
+    }
+  </script>
+</body>
+
+</html>

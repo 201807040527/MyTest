@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array map() 方法</title>
+</head>
+
+<body>
+  <!-- 获取数组元素的平方根 -->
+  <button onclick="myFun()">获取数组元素的平方根</button>
+  <p id="demo"></p>
+  <!-- 数组中的每个元素乘于输入框指定的值，返回新数组 -->
+  最小年龄: <input type="number" id="mul" value="10">
+  <button onclick="myFun2()">点我</button>
+  <p>新数组: <span id="demo_mul"></span></p>
+  <script>
+    //获取数组元素的平方根
+    var numbers = [4, 9, 16, 25];
+    function myFun() {
+      let x = document.getElementById("demo").innerHTML =
+        numbers.map(Math.sqrt);
+    }
+    //数组中的每个元素乘于输入框指定的值，返回新数组
+    var num2 = [65, 44, 12, 4];
+    function Multiply(num) {
+      return num * document.getElementById("mul").value;
+    }
+    function myFun2() {
+      document.getElementById("demo_mul").innerHTML = num2.map(Multiply);
+    }
+
+  </script>
+</body>
+
+</html>
