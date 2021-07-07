@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>异步编程</title>
+</head>
+
+<body>
+  <script>
+    //eg1
+    // async function myAsync1() {
+    //   return "hi";
+    // }
+    // async function myAsync2() {
+    //   return Promise.resolve('hello')
+    // }
+
+    // console.log(myAsync1())
+    // console.log(myAsync2())
+
+    // myAsync1().then(r => {
+    //   console.log(r) // 'hi'
+    // })
+    // myAsync2().then(r => {
+    //   console.log(r)  // 'hello'
+    // })
+
+    //eg2
+    function myFun() {
+      return "1";
+    }
+    async function child1() {
+      return new Promise((shao, duo) => {
+        setTimeout(() => { shao('2') }, 500)
+      })
+    }
+    async function child2() {
+      // let p2 = new Promise((shao, duo) => {
+      //   setTimeout(() => { shao('3') }, 10)
+      // })
+      return new Promise((shao, duo) => {
+        setTimeout(() => { shao('3') }, 500)
+      })
+    }
+
+    async function Children() {
+      const v1 = await myFun();
+      console.log('v1===>', v1)
+      const v2 = await child1();
+      console.log('v2===>', v2)
+      const v3 = await child2();
+      console.log('v3===>', v3);
+    }
+    Children();
+
+  </script>
+
+</body>
+
+</html>

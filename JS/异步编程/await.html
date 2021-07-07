@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>await</title>
+</head>
+
+<body>
+  <script>
+    async function fn() {
+      console.log(0);         //0
+
+      setTimeout(() => {
+        console.log(1);       //2
+      }, 0);
+
+      await new Promise(resolve => {
+        setTimeout(() => {
+          console.log(2);     //3
+        }, 0);
+
+        console.log(3);       //1
+        //等待1秒后
+        setTimeout(() => {
+          console.log(4);      //5
+          resolve();
+        }, 1000);
+
+        setTimeout(() => {
+          console.log(5);       //4
+        }, 0);
+      });
+      //最后执行
+      setTimeout(() => {
+        console.log(6);        //7
+      }, 0);
+      console.log(7);          //6
+    }
+
+    fn();
+
+  </script>
+</body>
+
+</html>
