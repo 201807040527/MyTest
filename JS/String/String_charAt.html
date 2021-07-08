@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>charAt()方法</title>
+</head>
+
+<body>
+  <p id="demo">点击按钮显示字符串的字符。</p>
+  <button onclick="myFunction()">点我</button>
+  <script>
+    function myFunction() {
+      var str = "HELLO WORLD";
+      document.getElementById("demo").innerHTML =
+        str.charAt(str.length - 1);   //最后一个字符
+    }
+  </script>
+</body>
+
+</html>
