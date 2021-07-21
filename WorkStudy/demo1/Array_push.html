@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>取出两个数组的相同元素</title>
+</head>
+
+<body>
+  <script>
+    //取出两个数组的值
+    var arr1 = ['小明', '小红', '小黄', '小绿', '小紫', '小黑'];
+    var arr2 = ['小红', '小黄', '小绿', '小紫', '小黑', '小亮'];
+    let newArr = [];
+    for (let i = 0; i < arr2.length; i++) {
+      for (let j = 0; j < arr1.length; j++) {
+        if (arr1[j] === arr2[i]) {
+          newArr.push(arr1[j]);
+        }
+      }
+    }
+    console.log(newArr);
+  </script>
+</body>
+
+</html>

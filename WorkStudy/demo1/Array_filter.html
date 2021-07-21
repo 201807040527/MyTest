@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>取出两个数组的不同元素</title>
+</head>
+
+<body>
+  <script>
+    //取出两个数组的不同元素
+    var arr1 = ['小明', '小红', '小黄', '小绿', '小紫', '小黑'];
+    var arr2 = ['小红', '小黄', '小绿', '小紫', '小黑', '小亮', '小阳'];
+    var myArr = arr1.concat(arr2).filter(function (v, i, arr) {
+      return arr.indexOf(v) === arr.lastIndexOf(v);
+    });
+    console.log(myArr);
+    //Array filter() 方法：创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。
+    //indexOf() 方法：可返回某个指定的字符串值在字符串中首次出现的位置，如果没有找到匹配的字符串则返回 -1。
+    //lastIndexOf() 方法：可返回一个指定的字符串值最后出现的位置，如果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索。
+
+  </script>
+</body>
+
+</html>
