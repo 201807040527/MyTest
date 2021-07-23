@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>keys() 方法</title>
+</head>
+
+<body>
+  <p id="todo1"></p>
+  <p id="todo2"></p>
+  <p id="todo3"></p>
+  <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var x = fruits.keys();
+    document.getElementById("todo1").innerHTML = x.next().value;
+    document.getElementById("todo2").innerHTML = x.next().value;
+    document.getElementById("todo3").innerHTML = x.next().value;
+  </script>
+</body>
+
+</html>
