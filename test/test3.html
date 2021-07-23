@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>显隐原型链之间的关系</title>
+</head>
+
+<body>
+  <script>
+    //实例1
+    // var a = [1, 2, 3]
+    // var b = {
+    //   color: 'red',
+    //   size: '20'
+    // }
+    // function c() {
+    //   alert('c');
+    // }
+    // console.log('a', a)
+    // console.log('b', b)
+    // c();
+    // console.dir(c);
+
+    //实例2
+    function A() {
+      this.name = "Aray"
+      this.age = 12
+      this.eat = function () {
+        alert('apple')
+      }
+    }
+    A.prototype = {      //A.prototype只是一个指针，指向原型对象
+      num: 12,
+      drink() {
+        alert('water')
+      }
+    }
+    var a = new A();
+
+    console.dir(A)       //函数  有prototype（显式原型）和__proto__（隐式原型）
+    console.log('a===>', a)  //对象  只有__proto__（隐式原型）
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>输入数字的验证</title>
+</head>
+
+<body>
+  <p>请输入 1 到 10 之间的数字：</p>
+  <input id="numb">
+  <button type="button" onclick="myFunction()">提交</button>
+  <p id="demo"></p>
+  <script>
+    function myFunction() {
+      var x, text;
+      // 获取 id="numb" 的值
+      x = document.getElementById("numb").value;
+      // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
+      if (isNaN(x) || x < 1 || x > 10) {
+        text = "输入错误";
+      } else {
+        text = "输入正确";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+  </script>
+</body>
+
+</html>

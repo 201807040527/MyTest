@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test1-构造函数</title>
+</head>
+
+<body>
+  <script>
+    // function Dianzan() { }
+    // Dianzan.prototype = {
+    //   dianzan: function () {
+    //     alert('给博主点赞')
+    //   },
+    //   budianzan: function () {
+    //     alert('狠心拒绝')
+    //   }
+    // }
+    // var dianzan = new Dianzan();
+    // dianzan.dianzan();
+
+    // var Person = function () { };
+    // console.log('Person======>', Person);
+    // Person.prototype.sayName = function () {
+    //   alert("My Name is Jacky");
+    // };
+
+    // Person.prototype.age = 27;
+    // var p = new Person();
+    // console.log('p====>', p);
+    // p.sayName();
+
+    //构造函数
+    function Person(name) {
+      this.name = name;
+      this.eat = function () {
+        console.log(this.name + "吃东西");
+      }
+      this.sleep = function () {
+        console.log(this.name + "睡觉");
+      }
+    }
+    var p1 = new Person("小明");
+    p1.eat();//小明吃东西
+    p1.sleep();//小明睡觉
+    var p2 = new Person("小利");
+    p2.eat();//小利吃东西
+    p2.sleep();//小利睡觉
+    console.dir(p1);//dir()打印结构
+    console.dir(p2);
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>原型</title>
+</head>
+
+<body>
+  <script>
+    // 1.
+    // function Person() { }   //函数
+    // var person = new Person();  //对象
+    // console.dir(Person.prototype)
+    // console.log(person.__proto__)
+    // console.log(person.__proto__ === Person.prototype); // true
+
+    function A() { }          // 函数
+    var a = new A();     // 对象
+    console.dir(A.prototype)  // 显式原型
+    console.log(a.__proto__)  // 隐式原型
+    console.log(a.__proto__ === A.prototype); // true
+    //2.
+    // function Person() { }
+    // console.dir(Person);
+    // console.log(Person.prototype.constructor)
+    // console.log(Person === Person.prototype.constructor); // true
+
+    //3.
+    // function Person() { }
+    // Person.prototype.name = 'ZS';
+    // var person = new Person();
+    // person.name = 'LS';
+    // console.log(person.name)   // LS 
+    // delete person.name;
+    // console.log(person.name)   // ZS
+
+    //4.
+    // console.log(Object.prototype.__proto__ === null) // true
+
+  </script>
+</body>
+
+</html>
