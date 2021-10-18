@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object</title>
+</head>
+
+<body>
+  <script>
+    //属性
+    //Object.assign()方法用于将所有可枚举属性的值从一个或多个源对象分配到目标对象。
+    const num1 = { a: 1, b: 2 };
+    const num2 = { c: 10, d: 20 };
+    const renum = Object.assign(num1, num2);
+    console.log(num1);       //{a: 1, b: 2, c: 10, d: 20}
+    console.log(num2);       //{c: 10, d: 20}
+    console.log(renum)       //{a: 1, b: 2, c: 10, d: 20}
+
+    //Object.create()方法创建一个新对象，使用现有的对象来提供新创建的对象的__proto__。
+    const person = {
+      isGirl: false,
+      speak: function () {
+        console.log(`我的名字是${this.name},是女孩吗${this.isGirl}`)
+      }
+    };
+    const me = Object.create(person);
+    me.name = 'vivi';
+    me.isGirl = true;
+    me.speak();
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
